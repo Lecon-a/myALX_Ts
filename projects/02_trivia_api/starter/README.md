@@ -5,7 +5,7 @@ This project is a question and answering web app with the intended purpose of in
 All backend code follows [PEP8 style guidelines](https://www.python.org/dev/peps/pep-0008/).
 
 ## Developer Guidelines
-Hi Developers, you might see this interested in. <em>TODO:<em> debug while onsubmission of answer the user score is not updated in the database.
+Hi Developers, you might see this interested in. <em>TODO:<em> Any other insightful feature is welcome.
 
 ## Getting started
 
@@ -334,7 +334,7 @@ Sample: curl -X GET /categories/6/questions
 
 This endpoint listens to POST method and returns success, quiz_category, previous questions in a list format, a randomized distinct question by taking track of the previous question(s) id(s) whither filtered by distinct category or query all categories, 
 
-Sample: curl -X POST -H "Content-Type: application/json" -d '{"quiz_category": "Science", "previous_questions": []}' http://127.0.0.1:5000/quizzes
+Sample: curl -X POST -H "Content-Type: application/json" -d '{"quiz_category": {"type": "Science", "id":"0"}, "previous_questions": []}' http://127.0.0.1:5000/quizzes
 
 ```
     {
@@ -353,11 +353,11 @@ Sample: curl -X POST -H "Content-Type: application/json" -d '{"quiz_category": "
 
 Note: The above is on one trial/play. Also, when you try that sample of your own terminal distinct question might comes up because it is randomized.
 
-### PATCH /scores
+### PATCH /scores/<int:user_id>
 
 This endpoint listens to PATCH method to update user's score, and also returns success, username. 
 
-Sample: curl -X PATCH -H "Content-Type: application/json" -d '{"id":33, "name":"spog08", "user_score": 3}' http://127.0.0.1:5000/scores
+Sample: curl -X PATCH -H "Content-Type: application/json" -d '{"id":33, "name":"spog08", "user_score": 3}' http://127.0.0.1:5000/scores/8
 
 ```
     {
