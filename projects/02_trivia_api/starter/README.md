@@ -5,7 +5,7 @@ This project is a question and answering web app with the intended purpose of in
 All backend code follows [PEP8 style guidelines](https://www.python.org/dev/peps/pep-0008/).
 
 ## Developer Guidelines
-Hi Developers, you might see this interested in. <em>TODO:<em> debug while onsubmission of answer the user score is not updated in the database.
+Hi Developers, you might see this interested in. <em>TODO:<em> Any other insightful feature is welcome.
 
 ## Getting started
 
