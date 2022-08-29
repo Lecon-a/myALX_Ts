@@ -353,11 +353,11 @@ Sample: curl -X POST -H "Content-Type: application/json" -d '{"quiz_category": "
 
 Note: The above is on one trial/play. Also, when you try that sample of your own terminal distinct question might comes up because it is randomized.
 
-### PATCH /scores
+### PATCH /scores/<int:user_id>
 
 This endpoint listens to PATCH method to update user's score, and also returns success, username. 
 
-Sample: curl -X PATCH -H "Content-Type: application/json" -d '{"id":33, "name":"spog08", "user_score": 3}' http://127.0.0.1:5000/scores
+Sample: curl -X PATCH -H "Content-Type: application/json" -d '{"id":33, "name":"spog08", "user_score": 3}' http://127.0.0.1:5000/scores/8
 
 ```
     {
