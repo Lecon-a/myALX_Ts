@@ -13,5 +13,5 @@ ehthumbs.db
 Thumbs.db
 backend/flaskr/__pycache__
 backend/venv/
-backend/migrations
+backend/migrations/
 frontend/node_modules/
